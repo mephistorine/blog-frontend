@@ -18,4 +18,12 @@ export interface Article {
   categories: ID[]
   poster?: ID
   commentable: boolean
+  viewsCount: number
+  commentsCount: number
+}
+
+export interface Tag {
+  id: ID
+  color: string
+  name: string
 }

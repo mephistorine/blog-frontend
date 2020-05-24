@@ -19,7 +19,12 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@sm/utils": [ "src/shared/utils" ],
+      "@sm/base/*": [ "src/shared/base/*" ],
+      "@sm/pipes": [ "src/shared/pipes" ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

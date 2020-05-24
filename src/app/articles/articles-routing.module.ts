@@ -4,6 +4,10 @@ import { ArticlesContainerComponent } from './containers/articles-container/arti
 
 const routes: Routes = [
   {
+    path: ':slug',
+    component: ArticlesContainerComponent
+  },
+  {
     path: '',
     component: ArticlesContainerComponent
   }
