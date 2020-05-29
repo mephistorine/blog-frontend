@@ -53,10 +53,15 @@ those elements for which it can make sense to write user style sheet rules,
 in my opionion.</p>
 <div>This is a <code>div</code> element. Authors may use such elements instead
 of paragraph markup for various reasons. (End of <code>div</code>.)</div>
-<blockquote><p>This is a block quotation containing a single
+<blockquote>
+  <p>This is a block quotation containing a single
 paragraph. Well, not quite, since this is not <em>really</em>
 quoted text, but I hope you understand the point. After all, this
-page does not use HTML markup very normally anyway.</p></blockquote>
+page does not use HTML markup very normally anyway.</p>
+  <footer>
+    — Sam Bulatov, <cite>Wikipedia</cite>
+  </footer>
+</blockquote>
 <p>The following contains address information about the author, in an <code>address</code>
 element.</p>
 <address>
@@ -310,6 +315,17 @@ be­lieved that spe­cies were
  and had been sep­a­rate­ly cre­at­ed.
 This view has been ably main­tain­ed by many au­thors.
 
+
+<pre>
+interface ArticleForView {
+  title: string
+  slug: string
+  publishDate: ISO8601
+  viewsCount: number
+  commentsCount: number
+  commentable: boolean
+}
+</pre>
 
 <HR TITLE="Information about this document">
 

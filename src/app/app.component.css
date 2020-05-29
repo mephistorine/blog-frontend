@@ -1,0 +1,51 @@
+.app-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.sidebar {
+  min-width: 230px;
+  background-color: var(--main-color);
+  
+  display: flex;
+  align-items: center;
+}
+
+.content-container {
+  flex-grow: 1;
+  background-color: var(--second-color);
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation {
+  width: 100%;
+}
+
+.nav-list-item {
+  text-align: right;
+}
+
+.nav-list-item a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  display: block;
+  padding: .5rem;
+  font-size: 1.5em;
+  
+  /* todo: Костыль, реализовать логику, замени значения переменной */
+  --hover-background-color: hsl(var(--second-hue), 28%, 18%);
+}
+
+.nav-list-item a:hover,
+.nav-list-item a.is-active {
+  background-color: var(--hover-background-color);
+}

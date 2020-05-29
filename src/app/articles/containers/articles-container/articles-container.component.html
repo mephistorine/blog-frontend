@@ -1,0 +1,25 @@
+<div class="articles-container">
+	<div class="articles-list-container">
+		<div class="search-container">
+			<input class="search" type="text" placeholder="Поиск...">
+		</div>
+		<ul class="articles-list">
+			<li class="list-item" *ngFor="let article of articles$ | async" routerLinkActive="is-active">
+				<a [routerLink]="[ '/articles', article.slug ]">
+					<h3 class="article-title">{{ article.title }}</h3>
+					<time class="article-publish-date" [dateTime]="article.publishDate">{{ article.publishDate | date: 'dd.MM.yyyy' }}</time>
+					<div class="counts-container">
+						<div class="views counters">{{ article.viewsCount }}</div>
+						<div *ngIf="article.commentable" class="comments counters">{{ article.commentsCount }}</div>
+					</div>
+					<!--<ul class="tag-list">
+						<li class="tag" *ngFor="let tag of article.tags" [style]="'&#45;&#45;tag-color:' + tag.color">#{{ tag.name }}</li>
+					</ul>-->
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="content-container">
+		<sm-article-content [article]="articleSingle$ | async"></sm-article-content>
+	</div>
+</div>

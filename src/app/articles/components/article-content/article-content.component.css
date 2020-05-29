@@ -1,0 +1,102 @@
+::ng-deep .article-content-container {
+  --node-margins: 5rem;
+}
+
+::ng-deep .article-content-container > * {
+  margin-right: var(--node-margins);
+  margin-left: var(--node-margins);
+}
+
+/* HEADER */
+
+.article-header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 1.5rem;
+}
+
+.secondary-info img {
+  max-width: 100%;
+  height: auto;
+  border-bottom-left-radius: 35px;
+}
+
+.article-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.article-author {
+  display: flex;
+  align-items: center;
+}
+
+.article-name {
+  margin: 0;
+}
+
+.main-info::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 1rem;
+  background-color: var(--main-color);
+  margin-top: 2rem;
+  border-radius: 0 1rem 1rem 0;
+}
+
+.main-info {
+  position: relative;
+  padding: 4rem 1rem 0 1rem;
+}
+
+.secondary-info {
+  position: relative;
+}
+.tag-list {
+  padding: 0;
+  margin: 1rem 0;
+  list-style: none;
+  display: flex;
+  font-size: 0.7em;
+  
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+}
+
+.tag-list .tag {
+  color: white;
+}
+
+.tag-list .tag.like-label {
+  background-color: var(--tag-color, black);
+  padding: .1rem .3rem;
+  border-radius: 0.4rem;
+}
+
+.tag-list .tag:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.article-publish-date {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.article-publish-date::before {
+  content: '—';
+  font-size: 1.5em;
+  line-height: 1;
+  margin-right: 0.2rem;
+}
+
+.article-content-container {
+  font-size: 1.2;
+}

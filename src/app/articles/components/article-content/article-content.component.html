@@ -1,0 +1,31 @@
+<ng-template [ngIf]="article">
+	<header class="article-header">
+
+		<div class="main-info">
+			<h1 class="article-title">{{ article.title }}</h1>
+
+			<time class="article-publish-date" [dateTime]="article.publishDate">{{ article.publishDate | date: 'dd.MM.yyyy' }}</time>
+
+			<div class="article-author">
+				<img class="article-avatar" src="https://sun9-14.userapi.com/c857132/v857132016/16a573/xOokBOdsNDM.jpg?ava=1" alt="">
+				<p class="article-name">
+					<span class="name">Сэм</span>
+					<span class="last-name">Булатов</span>
+				</p>
+			</div>
+		</div>
+		<div class="secondary-info">
+			<img src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/83D7/production/_111515733_gettyimages-1208779325.jpg" alt="">
+
+			<ul class="tag-list">
+				<li class="tag like-label">css</li>
+				<li class="tag like-label">html</li>
+				<li class="tag like-label">js</li>
+			</ul>
+		</div>
+
+	</header>
+	<main class="article-content-container"
+	      [innerHTML]="article.content | safe: 'html'"
+	></main>
+</ng-template>
